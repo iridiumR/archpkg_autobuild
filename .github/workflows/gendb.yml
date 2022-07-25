@@ -1,0 +1,23 @@
+name: GENDB
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '1 */24 * * *'
+  workflow_run:
+    workflows: ["BUILD"]
+    types: [completed]
+  repository_dispatch:
+    types: update_hook
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Brx86/update-db-for-repo@master
+      with:
+        tag: x86_64
+    - uses: ncipollo/release-action@v1
+      with:
+        allowUpdates: true
+        tag: "x86_64"
+        artifacts: "./aya.*"
+        token: ${{ secrets.GITHUB_TOKEN }}
