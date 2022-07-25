@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [telegram-desktop-kdefix]
+        repos: [telegram-desktop-kdefix,linux-lqx]
 
       fail-fast: false
       
