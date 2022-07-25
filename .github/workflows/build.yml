@@ -9,8 +9,19 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [telegram-desktop-dev,linux-lqx]
-
+        repos: 
+          - telegram-desktop-dev
+          - linux-lqx
+          - stm32cubemx
+          - vofa+
+          - wps-office
+          - caj2pdf-qt
+          - commitizen-go
+          - gnvim
+          - modelsim-intel-starter
+          - optimus-manager-qt-kde
+          - python-comtool-git
+          - quartus-free
       fail-fast: false
       
     runs-on: ubuntu-latest
@@ -30,7 +41,7 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
-        tag: "packages"
+        tag: "x86_64"
         artifacts: "./*/*.zst"
         token: ${{ secrets.GITHUB_TOKEN }}
 
