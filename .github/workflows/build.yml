@@ -11,7 +11,6 @@ jobs:
       matrix:
         repos: 
           - telegram-desktop-dev
-          - linux-lqx
           - stm32cubemx
           - vofa+
           - wps-office
