@@ -22,6 +22,7 @@ jobs:
           - optimus-manager-qt-kde
           - python-comtool-git
           - quartus-free
+          - matlab
       fail-fast: false
       
     runs-on: ubuntu-latest
