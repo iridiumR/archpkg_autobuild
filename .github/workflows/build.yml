@@ -14,7 +14,6 @@ jobs:
           - stm32cubemx
           - vofa+
           - wps-office
-          - ccstudio
           - commitizen-go
           - gnvim
           - optimus-manager-qt-kde
